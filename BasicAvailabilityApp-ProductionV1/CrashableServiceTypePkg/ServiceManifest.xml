@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest Name="CrashableServiceTypePkg"
+                 Version="ProductionV1"
+                 xmlns="http://schemas.microsoft.com/2011/01/fabric"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServiceTypes>
+    <StatelessServiceType ServiceTypeName="CrashableServiceType" UseImplicitHost="true" />
+  </ServiceTypes>
+
+  <CodePackage Name="CodePkg" Version="ProductionV1">
+    <EntryPoint>
+      <ExeHost>
+        <Program>CrashableService.exe</Program>
+      </ExeHost>
+    </EntryPoint>
+  </CodePackage>
+</ServiceManifest>

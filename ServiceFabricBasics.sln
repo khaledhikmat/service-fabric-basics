@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrashableService", "CrashableService\CrashableService.csproj", "{F428BD2A-1357-4D09-A23D-B55D84C25335}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{7D527EB2-FCC0-4E8D-A1EB-01D165B5D40E}"
+	ProjectSection(SolutionItems) = preProject
+		DeployBasicAvailability.ps1 = DeployBasicAvailability.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F428BD2A-1357-4D09-A23D-B55D84C25335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F428BD2A-1357-4D09-A23D-B55D84C25335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F428BD2A-1357-4D09-A23D-B55D84C25335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F428BD2A-1357-4D09-A23D-B55D84C25335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
