@@ -8,11 +8,36 @@
     <StatelessServiceType ServiceTypeName="CrashableServiceType" UseImplicitHost="true" />
   </ServiceTypes>
 
-  <CodePackage Name="CodePkg" Version="Beta">
+  <!-- Code that is NOT Service-Fabric aware -->
+  <!-- Remove Console Redirection in production -->
+  <!-- https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-deploy-existing-app -->
+  <CodePackage Name="CrashableCodePkg" Version="Beta">
     <EntryPoint>
       <ExeHost>
         <Program>CrashableService.exe</Program>
+        <Arguments>8800</Arguments>
+		<ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
       </ExeHost>
     </EntryPoint>
   </CodePackage>
+
+  <!-- Code that is Service-Fabric aware -->
+  <!-- Remove Console Redirection in production -->
+  <!-- https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-deploy-existing-app -->
+  <CodePackage Name="MonitorCodePkg" Version="Beta">
+    <EntryPoint>
+      <ExeHost>
+        <Program>MonitorService.exe</Program>
+        <Arguments>8800</Arguments>
+		<ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
+      </ExeHost>
+    </EntryPoint>
+  </CodePackage>
+
+  <!-- ACL the 8800 port where the crashable service listens -->
+  <Resources>
+    <Endpoints>
+      <Endpoint Name="InputEndpoint" Port="8800" Protocol="http" Type="Input" />
+    </Endpoints>
+  </Resources>
 </ServiceManifest>

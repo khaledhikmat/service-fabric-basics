@@ -1,6 +1,7 @@
 $clusterUrl = "localhost"
 $imageStoreConnectionString = "file:C:\SfDevCluster\Data\ImageStoreShare"   # Use this with OneBox
 #$imageStoreConnectionString = "fabric:ImageStore"                          # Use this when not using
+
 $appPkgName = "BasicAvailabilityAppTypePkg"
 
 $appTypeName = "BasicAvailabilityAppType"
